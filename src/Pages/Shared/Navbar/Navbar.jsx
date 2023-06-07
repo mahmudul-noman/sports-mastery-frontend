@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import '../../../../src/App';
 import ActiveLink from './ActiveLink';
 import logo from '../../../assets/logo.png'
+import Container from '../Container/Container';
 
 
 const Navbar = () => {
 
 
     return (
-        <div>
-            <div className="navbar bg-base-100 container mx-auto py-6">
+        <Container>
+            <div className="navbar bg-base-100 py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,8 +43,6 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-
-
                 <div className="navbar-end space-x-3">
                     <div className='flex items-center'>
 
@@ -60,7 +59,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 };
 
