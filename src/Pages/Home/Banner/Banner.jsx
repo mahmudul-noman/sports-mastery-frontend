@@ -21,8 +21,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
 
@@ -42,8 +42,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -53,8 +53,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -75,8 +75,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,8 @@ const Banner = () => {
                         <h2 className="uppercase text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
                         <span className="text-rose-700 uppercase text-5xl text-start font-extrabold mt-2">CHAMPION ATHLETES</span>
                         <div className="flex gap-5">
-                            <button className="btn border-0 text-white bg-purple-600">Our Courses</button>
-                            <button className="btn border-0 text-white bg-pink-500">Get a Quote</button>
+                            <button className="btn border-0 text-white bg-purple-600 hover:bg-black">Our Courses</button>
+                            <button className="btn border-0 text-white bg-pink-500 hover:bg-black">Get a Quote</button>
                         </div>
                     </div>
                 </div>

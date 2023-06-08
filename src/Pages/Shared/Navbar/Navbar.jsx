@@ -4,14 +4,24 @@ import '../../../../src/App';
 import ActiveLink from './ActiveLink';
 import logo from '../../../assets/logo.png'
 import Container from '../Container/Container';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
 
     return (
         <Container>
-            <div className="navbar bg-base-100 py-6">
+            <div className="navbar z-10 bg-base-100 py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,15 +56,21 @@ const Navbar = () => {
                 <div className="navbar-end space-x-3">
                     <div className='flex items-center'>
 
-                        <div className='flex items-center'>
-                            <div className='mr-3'>
+                        {
+                            user ?
+                                <div className='flex items-center justify-center space-x-3'>
+                                    <div>
+                                        <img title={user.displayName} src={user.photoURL} className='w-14 h-14 border-2 border-[#927397] p-1 rounded-full object-cover' alt="" />
+                                    </div>
 
-                                <img title='' src='https://img.freepik.com/free-photo/athlete-runner-prepare-run-from-crouch-start_176420-16476.jpg?w=360&t=st=1686158179~exp=1686158779~hmac=48cadaf30687389c0d2eb59b646190762876e2b78cf5a071d3c1e276047e8b59' className='w-14 h-14 border-2 border-[#927397] p-1 rounded-full object-cover' alt="" />
-                            </div>
-                            <Link onClick='' className="btn btn-outline hover:bg-[#927397] border-[#927397] hover:border-[#927397]tracking-widest">Logout</Link>
-                        </div>
+                                    <Link className="btn text-white bg-[#927397] border-[#927397] hover:bg-transparent hover:text-black hover:border-[#927397] tracking-widest">Dashboard</Link>
 
-                        <Link to="/login" className="ml-2 btn btn-outline hover:bg-[#927397] border-[#927397] tracking-widest">Log in</Link>
+                                    <Link onClick={handleLogout} className="btn btn-outline hover:bg-[#927397] border-[#927397] hover:border-[#927397]tracking-widest">Logout</Link>
+                                </div>
+                                :
+                                <Link to="/login" className="ml-2 btn btn-outline hover:bg-[#927397] border-[#927397] tracking-widest">Log in</Link>
+                        }
+
 
                     </div>
                 </div>
