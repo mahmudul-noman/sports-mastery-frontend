@@ -1,5 +1,6 @@
 import Banner from "../Banner/Banner";
 import { Helmet } from 'react-helmet-async';
+import PopularClasses from "../PopularClasses/PopularClasses";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             </Helmet>
             <div>
                 <Banner></Banner>
+                <PopularClasses></PopularClasses>
             </div>
         </>
     );

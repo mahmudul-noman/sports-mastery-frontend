@@ -1,0 +1,110 @@
+[
+    {
+        "_id": "5f79a2d7f97dfc7a43dcab9d",
+        "classImage": "https://img.freepik.com/free-vector/green-cricket-sports-background-with-illustration-players-golden-trophy-cup_1302-5494.jpg?w=900&t=st=1686251360~exp=1686251960~hmac=072eb9656670bf3db9726fbcfc1acc4092b5a316cf966b6cd3a5c239e9dcba18",
+        "className": "Cricket Fundamentals",
+        "enrolledStudents": 25,
+        "instructorName": "Mohammed Rahman",
+        "availableSeats": 5,
+        "price": 60
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcab9e",
+        "classImage": "https://img.freepik.com/free-photo/football-trainer-teaching-his-pupils_23-2149708033.jpg?w=1060&t=st=1686251397~exp=1686251997~hmac=0f51e98881700977d6fe525720521ae78df1b201c7f35c24d1611f2e91727e4f",
+        "className": "Football Skills Development",
+        "enrolledStudents": 20,
+        "instructorName": "Tasnim Ahmed",
+        "availableSeats": 10,
+        "price": 70
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcab9f",
+        "classImage": "https://img.freepik.com/free-photo/athletic-couple-playing-squash-together_329181-18910.jpg?w=1060&t=st=1686251420~exp=1686252020~hmac=3ef61918ad2a51f2b4840d4892691a2f14f3331e0fe381e5909a95d3d95d25ef",
+        "className": "Advanced Badminton Techniques",
+        "enrolledStudents": 15,
+        "instructorName": "Sadia Khan",
+        "availableSeats": 5,
+        "price": 50
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba0",
+        "classImage": "https://img.freepik.com/free-photo/bowling-ball-with-bowling_1048-2677.jpg?w=900&t=st=1686251501~exp=1686252101~hmac=013d8a17f284e8d2ba872965b64718eb4f8c09d09c5eeae9e0dd92024ed58041",
+        "className": "Cricket Bowling Mastery",
+        "enrolledStudents": 22,
+        "instructorName": "Rahima Akter",
+        "availableSeats": 8,
+        "price": 55
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba1",
+        "classImage": "https://img.freepik.com/free-photo/high-angle-football-trainer-teaching-kids_23-2149742039.jpg?w=1060&t=st=1686251527~exp=1686252127~hmac=da90e39dd0bd6db79251e879d461d81a44bd63cd0848b2928bce746d05bd1dc8",
+        "className": "Youth Football League",
+        "enrolledStudents": 18,
+        "instructorName": "Kamal Ahmed",
+        "availableSeats": 7,
+        "price": 80
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba2",
+        "classImage": "https://img.freepik.com/free-photo/beautiful-girl-playing-tennis_23-2148414481.jpg?w=900&t=st=1686251556~exp=1686252156~hmac=f5022c77c121d92a7c2ff7c20bf130e13b75de8454d73eb08fddf12402b130cf",
+        "className": "Beginner's Badminton Workshop",
+        "enrolledStudents": 10,
+        "instructorName": "Fatima Rahman",
+        "availableSeats": 15,
+        "price": 45
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba3",
+        "classImage": "https://img.freepik.com/free-vector/green-cricket-sports-background-with-illustration-players-golden-trophy-cup_1302-5494.jpg?w=900&t=st=1686251360~exp=1686251960~hmac=072eb9656670bf3db9726fbcfc1acc4092b5a316cf966b6cd3a5c239e9dcba18",
+        "className": "Cricket Batting Techniques",
+        "enrolledStudents": 12,
+        "instructorName": "Shahid Ali",
+        "availableSeats": 3,
+        "price": 65
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba4",
+        "classImage": "https://img.freepik.com/free-photo/amateur-football-concept-with-goalkeeper_23-2147833420.jpg?w=1060&t=st=1686251675~exp=1686252275~hmac=cb5823e7154fed1fa12db7c1d9e4d54730a714471264334ef9f5c459abd7d812",
+        "className": "Football Goalkeeping Masterclass",
+        "enrolledStudents": 8,
+        "instructorName": "Farah Khan",
+        "availableSeats": 12,
+        "price": 75
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba5",
+        "classImage": "https://img.freepik.com/free-photo/beautiful-girl-playing-tennis_23-2148414481.jpg?w=900&t=st=1686251556~exp=1686252156~hmac=f5022c77c121d92a7c2ff7c20bf130e13b75de8454d73eb08fddf12402b130cf",
+        "className": "Intermediate Badminton Training",
+        "enrolledStudents": 14,
+        "instructorName": "Imran Hassan",
+        "availableSeats": 6,
+        "price": 55
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba6",
+        "classImage": "https://img.freepik.com/free-vector/green-cricket-sports-background-with-illustration-players-golden-trophy-cup_1302-5494.jpg?w=900&t=st=1686251360~exp=1686251960~hmac=072eb9656670bf3db9726fbcfc1acc4092b5a316cf966b6cd3a5c239e9dcba18",
+        "className": "Cricket Fielding Techniques",
+        "enrolledStudents": 10,
+        "instructorName": "Nadia Ahmed",
+        "availableSeats": 10,
+        "price": 60
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba7",
+        "classImage": "https://img.freepik.com/free-photo/soccer-ball-white-line-stadium_1150-5285.jpg?w=1060&t=st=1686251761~exp=1686252361~hmac=25cd80b3b2010ff9d5e10742f54aac1e09def1720a985bbf54c3c6b544527d59",
+        "className": "Advanced Football Tactics",
+        "enrolledStudents": 16,
+        "instructorName": "Abdul Haque",
+        "availableSeats": 4,
+        "price": 90
+    },
+    {
+        "_id": "5f79a2d7f97dfc7a43dcaba8",
+        "classImage": "https://img.freepik.com/free-photo/beautiful-girl-playing-tennis_23-2148414481.jpg?w=900&t=st=1686251556~exp=1686252156~hmac=f5022c77c121d92a7c2ff7c20bf130e13b75de8454d73eb08fddf12402b130cf",
+        "className": "Badminton Doubles Strategies",
+        "enrolledStudents": 23,
+        "instructorName": "Fahima Rahman",
+        "availableSeats": 14,
+        "price": 50
+    }
+]
