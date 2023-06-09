@@ -7,11 +7,14 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import useCart from "../../hooks/useCart";
+import { FaInfoCircle } from 'react-icons/fa';
 
 const Classes = () => {
 
     const [classes, loading] = useClass();
     const { user } = useContext(AuthContext);
+    const [cart, refetch] = useCart();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -30,6 +33,7 @@ const Classes = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
+                        refetch(); //Refetch Cart to update cart number
                         Swal.fire('Class Added To Cart')
                     }
                 })
@@ -64,6 +68,10 @@ const Classes = () => {
                     <SectionTitle heading='Discover a World of Sports Excellence' subHeading='Elevate Your Skills with our Comprehensive Classes and Training Programs'></SectionTitle>
                 </div>
 
+                <div className="flex items-center gap-2">
+                    <FaInfoCircle className="text-cyan-800"></FaInfoCircle>
+                    <h2 className="font-semibold">Hello, {user?.displayName}. You have <span className="font-extrabold text-sky-600">{cart.length || 0} items</span> in your cart.</h2>
+                </div>
                 {/* ------------------------------ */}
                 <div className="pt-10 pb-24">
                     <table className="table w-full">

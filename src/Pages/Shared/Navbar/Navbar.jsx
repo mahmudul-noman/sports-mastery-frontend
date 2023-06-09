@@ -63,7 +63,7 @@ const Navbar = () => {
                                         <img title={user.displayName} src={user.photoURL} className='w-14 h-14 border-2 border-[#927397] p-1 rounded-full object-cover' alt="" />
                                     </div>
 
-                                    <Link className="btn text-white bg-[#927397] border-[#927397] hover:bg-transparent hover:text-black hover:border-[#927397] tracking-widest">Dashboard</Link>
+                                    <Link to='/dashboard' className="btn text-white bg-[#927397] border-[#927397] hover:bg-transparent hover:text-black hover:border-[#927397] tracking-widest">Dashboard</Link>
 
                                     <Link onClick={handleLogout} className="btn btn-outline hover:bg-[#927397] border-[#927397] hover:border-[#927397]tracking-widest">Logout</Link>
                                 </div>
