@@ -4,8 +4,8 @@ const ClassCard = ({ cls }) => {
     const { classImage, className, instructorName, enrolledStudents, availableSeats, price } = cls;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={classImage} alt="Class Image" /></figure>
+        <div className="card bg-base-100 shadow-xl group">
+            <figure><img className="group-hover:scale-110 transition" src={classImage} alt="Class Image" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{className}</h2>
                 <p className="font-semibold text-transparent bg-gradient-to-r from-purple-900 to-sky-300 bg-clip-text">Instructor: {instructorName}</p>
