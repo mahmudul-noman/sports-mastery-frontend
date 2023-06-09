@@ -34,7 +34,7 @@ const Review = () => {
                                         placeholderSymbol={<FaStarHalfAlt></FaStarHalfAlt>}
                                         fullSymbol={<FaStar></FaStar>}
                                     />
-                                    <p className="text-white text-start">I highly recommend the sports academy for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
+                                    <p className="text-white text-start">I highly recommend the <span className='font-extrabold'>Sports Mastery</span> for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
                                     <span className='text-white font-extrabold italic'>Abid Hasan, Student</span>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ const Review = () => {
                                         placeholderSymbol={<FaStarHalfAlt></FaStarHalfAlt>}
                                         fullSymbol={<FaStar></FaStar>}
                                     />
-                                    <p className="text-white text-start">I highly recommend the sports academy for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
+                                    <p className="text-white text-start">I highly recommend the <span className='font-extrabold'>Sports Mastery</span> for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
                                     <span className='text-white font-extrabold italic'>Fahima Rahman, Student</span>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ const Review = () => {
                                         placeholderSymbol={<FaStarHalfAlt></FaStarHalfAlt>}
                                         fullSymbol={<FaStar></FaStar>}
                                     />
-                                    <p className="text-white text-start">I highly recommend the sports academy for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
+                                    <p className="text-white text-start">I highly recommend the <span className='font-extrabold'>Sports Mastery</span> for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
                                     <span className='text-white font-extrabold italic'>Minhaz Uddin, Student</span>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ const Review = () => {
                                         placeholderSymbol={<FaStarHalfAlt></FaStarHalfAlt>}
                                         fullSymbol={<FaStar></FaStar>}
                                     />
-                                    <p className="text-white text-start">I highly recommend the sports academy for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
+                                    <p className="text-white text-start">I highly recommend the <span className='font-extrabold'>Sports Mastery</span> for anyone looking to enhance their athletic skills. The trainers are knowledgeable and dedicated, providing top-notch guidance and support. The facilities and training programs are exceptional, ensuring a productive and enjoyable experience for all athletes.</p> <br />
                                     <span className='text-white font-extrabold italic'>Abida Karim, Student</span>
                                 </div>
                             </div>

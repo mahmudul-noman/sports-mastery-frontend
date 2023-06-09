@@ -1,5 +1,6 @@
 
-const SectionTitle = ({heading, subHeading}) => {
+// TODO - Change SubHeading Font Style
+const SectionTitle = ({ heading, subHeading }) => {
     return (
         <div className="text-center mx-auto mb-14">
             <h3 className="text-3xl font-extrabold uppercase">{heading}</h3>

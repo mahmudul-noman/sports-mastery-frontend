@@ -3,6 +3,7 @@ const ClassCard = ({ cls }) => {
 
     const { classImage, className, instructorName, enrolledStudents, availableSeats, price } = cls;
 
+
     return (
         <div className="card bg-base-100 shadow-xl group">
             <figure><img className="group-hover:scale-110 transition" src={classImage} alt="Class Image" /></figure>
