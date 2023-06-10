@@ -43,20 +43,19 @@ const MyClass = () => {
 
 
 
-
     return (
         <>
             <Helmet>
                 <title>SM | My Classes</title>
             </Helmet>
             <div>
-                <div className="mt-20">
-                    <SectionTitle heading='Your Selected Classes'></SectionTitle>
+                <div className="mb-12">
+                    <SectionTitle heading='Your Selected Classes' subHeading='Streamline Your Shopping Experience: Pay & Delete with Ease!'></SectionTitle>
                 </div>
 
                 <div className="flex items-center gap-2">
                     <FaInfoCircle className="text-cyan-800"></FaInfoCircle>
-                    <h2 className="font-semibold">Hello, <span className="font-extrabold text-sky-600">{user?.displayName}</span>. You have <span className="font-extrabold text-sky-600">{cart.length || 0} items</span> in your cart.</h2>
+                    <h2 className="font-semibold">Hello ! <span className="font-extrabold text-sky-600">{user?.displayName}</span>. You have <span className="font-extrabold text-sky-600">{cart.length || 0} items</span> in your cart.</h2>
                 </div>
                 {/* ------------------------------ */}
                 <div className="pt-10 pb-24">

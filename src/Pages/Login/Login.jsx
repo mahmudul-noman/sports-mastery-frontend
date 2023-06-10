@@ -1,4 +1,4 @@
-import { FaGoogle, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../assets/login.gif'
 import { useForm } from "react-hook-form";
@@ -6,13 +6,14 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
 // TODO - Design Need
 const Login = () => {
 
 
-    const { signIn, googleSignIn } = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -36,22 +37,6 @@ const Login = () => {
                 navigate(from, { replace: true });
             })
     };
-
-
-
-    // Google Sign In
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then(result => {
-                const user = result.user;
-                Swal.fire('Login Successfully')
-                navigate(from, { replace: true });
-            })
-            .catch(error => {
-                console.log(error.message);
-            })
-    }
-
 
 
     return (
@@ -93,7 +78,7 @@ const Login = () => {
                                 </div>
                             </form>
                             <div>
-                                <button onClick={handleGoogleSignIn} className='btn border-0 btn-block flex items-center bg-gradient-to-r from-green-700 to-yellow-600 tracking-widest'>Login With Google <span className='ml-4 text-2xl'><FaGoogle></FaGoogle></span></button>
+                                <SocialLogin></SocialLogin>
                             </div>
                             <p className='font-semibold mt-5'>Don't have an account? <Link to='/signUp' className='text-rose-600'>Sign Up</Link></p>
                         </div>

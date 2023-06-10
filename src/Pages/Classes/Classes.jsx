@@ -6,7 +6,7 @@ import Loader from "../Shared/Loader/Loader";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { FaInfoCircle } from 'react-icons/fa';
 
@@ -67,10 +67,10 @@ const Classes = () => {
                 <div className="mt-20">
                     <SectionTitle heading='Discover a World of Sports Excellence' subHeading='Elevate Your Skills with our Comprehensive Classes and Training Programs'></SectionTitle>
                 </div>
-
+                
                 <div className="flex items-center gap-2">
-                    <FaInfoCircle className="text-cyan-800"></FaInfoCircle>
-                    <h2 className="font-semibold">Hello, {user?.displayName}. You have <span className="font-extrabold text-sky-600">{cart.length || 0} items</span> in your cart.</h2>
+                    <FaInfoCircle className="text-cyan-700"></FaInfoCircle>
+                    <h2 className="font-semibold">Hello ! {user?.displayName}. You have <span className="font-extrabold text-sky-600 text-xl"><Link to='/dashboard/myClass'>{cart.length || 0} items</Link></span> in your cart.</h2>
                 </div>
                 {/* ------------------------------ */}
                 <div className="pt-10 pb-24">
@@ -97,7 +97,7 @@ const Classes = () => {
                                         <td className="font-semibold text-base">{cls.instructorName}</td>
                                         <td className="text-base font-semibold">{cls.availableSeats}</td>
                                         <td className="text-base font-semibold">$ {cls.price}</td>
-                                        <td><button onClick={() => handleAddToCart(cls)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Enroll</button></td>
+                                        <td><button onClick={() => handleAddToCart(cls)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Select</button></td>
                                     </tr>)
                             }
                         </tbody>
