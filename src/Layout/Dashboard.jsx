@@ -3,12 +3,19 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 import Footer from "../Pages/Shared/Footer/Footer";
 import Container from "../Pages/Shared/Container/Container";
 import { Helmet } from "react-helmet-async";
+import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
 
 // TODO - Design Improve, FavIcon
 const Dashboard = () => {
 
-    const isAdmin = true;
-    const isInstructor = true;
+    // const isAdmin = true;
+    // const isInstructor = true;
+
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
+
+
 
 
     return (

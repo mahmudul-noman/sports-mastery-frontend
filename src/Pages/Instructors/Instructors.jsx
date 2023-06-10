@@ -1,13 +1,26 @@
-import { Link } from "react-router-dom";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import Container from "../Shared/Container/Container";
-import useInstructor from "../../hooks/useInstructor";
 import Loader from "../Shared/Loader/Loader";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
+import useAuth from '../../hooks/useAuth';
 
 const Instructors = () => {
 
-    const [instructors, loading] = useInstructor();
+    const { loading } = useAuth();
+    const [instructors, setInstructors] = useState([]);
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                // setInstructors(data);
+                const filteredInstructors = data.filter(user => user.role === 'instructor');
+                setInstructors(filteredInstructors);
+            })
+    }, [])
+
 
     if (loading) {
         return <Loader></Loader>
@@ -39,9 +52,9 @@ const Instructors = () => {
                                 instructors.map((instr, index) =>
                                     <tr key={instr._id}>
                                         <th>{index + 1}</th>
-                                        <td className="text-center"><img className="w-32 h-32 rounded-xl object-cover" src={instr.instructorImage} alt="" /></td>
-                                        <td className="text-lg font-bold">{instr.instructorName}</td>
-                                        <td className="font-semibold text-base">{instr.instructorEmail}</td>
+                                        <td className="text-center"><img className="w-32 h-32 rounded-xl object-cover" src={instr.photo} alt="" /></td>
+                                        <td className="text-lg font-bold">{instr.name}</td>
+                                        <td className="font-semibold text-base">{instr.email}</td>
                                     </tr>)
                             }
                         </tbody>
