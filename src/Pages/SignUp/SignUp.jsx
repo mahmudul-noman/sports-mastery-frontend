@@ -9,13 +9,17 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 
-// TODO - Design Need & Hide - UnHide, Confirm Password, Design Need. Design Correct.
+
 const SignUp = () => {
 
     // Password Hide & Show 
     const [hide, setHide] = useState(false);
+    const [conhide, setConHide] = useState(false);
     const handlePasswordVisible = () => {
         setHide(!hide);
+    }
+    const handleConPasswordVisible = () => {
+        setConHide(!conhide);
     }
 
 
@@ -93,23 +97,73 @@ const SignUp = () => {
                                     {errors.photoURL && <span className="text-red-600">Photo is required *</span>}
                                 </div>
 
-
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-semibold text-base">Password</span>
                                     </label>
                                     <div className="relative">
-                                        <input defaultValue="" {...register("password", {
-                                            required: true,
-                                            minLength: 6,
-                                            pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*()\-_=+{}[\]|\\:;,<.>/?]).*$/,
-                                        })} type={hide ? "text" : "password"} name='password' placeholder="Your Password" className="input border-0 focus:outline-none w-full" />
-                                        <label onClick={handlePasswordVisible} className='cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2'>{!hide ? <FaRegEye className='text-xl'></FaRegEye> : <FaRegEyeSlash className='text-xl'></FaRegEyeSlash>}</label>
+                                        <input
+                                            defaultValue=""
+                                            {...register("password", {
+                                                required: true,
+                                                minLength: 6,
+                                                pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*()\-_=+{}[\]|\\:;,<.>/?]).*$/,
+                                            })}
+                                            type={hide ? "text" : "password"}
+                                            name="password"
+                                            placeholder="Your Password"
+                                            className="input border-0 focus:outline-none w-full"
+                                        />
+                                        <label
+                                            onClick={handlePasswordVisible}
+                                            className="cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2"
+                                        >
+                                            {!hide ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />}
+                                        </label>
                                     </div>
-                                    {errors.password?.type === 'required' && <span className="text-red-600">Password is required *</span>}
-                                    {errors.password?.type === 'minLength' && <span className="text-red-600">Password is less than 6 characters *</span>}
-                                    {errors.password?.type === 'pattern' && <span className="text-red-600">Password at least one capital letter and one special character *</span>}
+                                    {errors.password?.type === "required" && (
+                                        <span className="text-red-600">Password is required *</span>
+                                    )}
+                                    {errors.password?.type === "minLength" && (
+                                        <span className="text-red-600">Password is less than 6 characters *</span>
+                                    )}
+                                    {errors.password?.type === "pattern" && (
+                                        <span className="text-red-600">Password requires at least one capital letter and one special character *</span>
+                                    )}
                                 </div>
+
+
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text font-semibold text-base">Confirm Password</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            defaultValue=""
+                                            {...register("confirmPassword", {
+                                                required: true,
+                                                validate: (value) => value === watch("password"),
+                                            })}
+                                            type={conhide ? "text" : "password"}
+                                            name="confirmPassword"
+                                            placeholder="Confirm Password"
+                                            className="input border-0 focus:outline-none w-full"
+                                        />
+                                        <label
+                                            onClick={handleConPasswordVisible}
+                                            className="cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2"
+                                        >
+                                            {!conhide ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />}
+                                        </label>
+                                    </div>
+                                    {errors.confirmPassword?.type === "required" && (
+                                        <span className="text-red-600">Confirm Password is required *</span>
+                                    )}
+                                    {errors.confirmPassword?.type === "validate" && (
+                                        <span className="text-red-600">Passwords do not match *</span>
+                                    )}
+                                </div>
+
 
 
                                 <div className="form-control mt-6">
