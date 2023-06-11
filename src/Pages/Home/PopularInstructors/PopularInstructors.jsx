@@ -5,17 +5,20 @@ import InstructorCard from "./InstructorCard";
 
 const PopularInstructors = () => {
 
+
+
+
     const [instructors, setInstructors] = useState([]);
 
     useEffect(() => {
-        fetch('instructors.json')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => {
-                const popularInstructors = data.slice(0, 6);
+                const instructorUsers = data.filter(user => user.role === 'instructor');
+                const popularInstructors = instructorUsers.slice(0, 6);
                 setInstructors(popularInstructors);
-            })
-    }, [])
-
+            });
+    }, []);
 
     return (
         <>

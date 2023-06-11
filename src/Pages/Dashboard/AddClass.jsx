@@ -11,7 +11,7 @@ const AddClass = () => {
 
     const onSubmit = data => {
         const { availableSeats, classImage, className, price } = data;
-        const newClass = { availableSeats: parseInt(availableSeats), classImage, className, price: parseFloat(price) }
+        const newClass = { availableSeats: parseInt(availableSeats), classImage, instructorName: user?.displayName, instructorEmail: user?.email, className, price: parseFloat(price) }
         console.log(newClass);
         axiosSecure.post('/classes', newClass)
             .then(data => {
@@ -55,7 +55,7 @@ const AddClass = () => {
                         <label className="label">
                             <span className="label-text font-semibold text-lg">Instructor Name</span>
                         </label>
-                        <input required className="input border-[1px] border-[#927397] focus:outline-none shadow" type="text" value={user?.displayName} {...register("instructorName")} disabled={user?.displayName} />
+                        <input required className="input border-[1px] border-[#927397] focus:outline-none shadow" type="text" defaultValue={user?.displayName} {...register("instructorName")} disabled={user?.displayName} />
                     </div>
 
                     {/* Instructor Email */}
@@ -63,7 +63,7 @@ const AddClass = () => {
                         <label className="label">
                             <span className="label-text font-semibold text-lg">Instructor Email</span>
                         </label>
-                        <input required className="input border-[1px] border-[#927397] focus:outline-none shadow" type="email" value={user?.email} {...register("instructorEmail")} disabled={user?.email} />
+                        <input required className="input border-[1px] border-[#927397] focus:outline-none shadow" type="email" defaultValue={user?.email} {...register("instructorEmail")} disabled={user?.email} />
                     </div>
 
                     {/* Class Price */}

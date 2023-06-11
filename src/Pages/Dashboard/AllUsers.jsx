@@ -5,12 +5,16 @@ import { FaCheckCircle, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import Loader from "../Shared/Loader/Loader";
 import useAuth from "../../hooks/useAuth";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 
 // TODO: Disabled Unwanted action button
 const AllUsers = () => {
 
     const { loading } = useAuth();
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch('http://localhost:5000/users')
