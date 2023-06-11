@@ -5,24 +5,19 @@ import { FaCheckCircle, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import Loader from "../Shared/Loader/Loader";
 import useAuth from "../../hooks/useAuth";
-// import useAdmin from "../../hooks/useAdmin";
-// import useInstructor from "../../hooks/useInstructor";
 
 
-// TODO: Disabled Unwanted action button
 const AllUsers = () => {
 
     const { loading } = useAuth();
-    // const [isAdmin] = useAdmin();
-    // const [isInstructor] = useInstructor();
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('https://sports-mastery-server.vercel.app/users')
         return res.json();
     })
 
     const handleMakeAdmin = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://sports-mastery-server.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -41,7 +36,7 @@ const AllUsers = () => {
     }
 
     const handleMakeInstructor = user => {
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+        fetch(`https://sports-mastery-server.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -64,7 +59,6 @@ const AllUsers = () => {
     }
 
     return (
-        // TODO - Design Improve
         <>
             <Helmet>
                 <title>SM | Manage Users</title>

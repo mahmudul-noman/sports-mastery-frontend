@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
-// TODO - Design Need
+
 const Login = () => {
 
 
@@ -49,8 +49,8 @@ const Login = () => {
                     <div className="text-center lg:text-left">
                         <img src={loginImg} alt="" />
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
-                        <h1 className='text-center text-4xl text-pink-600 font-bold'>Login</h1>
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-3 bg-gradient-to-r from-sky-100 via-purple-300 to-sky-100">
+                        <h1 className='text-center text-4xl text-purple-600 font-extrabold'>Login</h1>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="form-control">
@@ -74,7 +74,7 @@ const Login = () => {
                                 {/* <p className='text-sm font-extrabold text-green-600'>{success}</p>
                             <p className='text-sm font-extrabold text-red-600'>{error}</p> */}
                                 <div className="form-control mt-6">
-                                    <button className="text-md tracking-widest btn border-0 bg-gradient-to-r from-pink-400 to-yellow-500">Login</button>
+                                    <button className="text-md text-white font-extrabold tracking-widest btn border-0 bg-gradient-to-r from-purple-500 to-purple-700">Login</button>
                                 </div>
                             </form>
                             <div>

@@ -26,7 +26,7 @@ const Classes = () => {
         if (user) {
             const cartClass = { classId: cls._id, className: cls.className, image: cls.classImage, price: cls.price, email: user?.email, name: user?.displayName }
             console.log(cartClass);
-            fetch('http://localhost:5000/carts', {
+            fetch('https://sports-mastery-server.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -18,7 +18,7 @@ const Review = () => {
             <Container>
                 <div className="pb-24">
                     <SectionTitle heading='Student Feedback' subHeading='Sports Mastery greatly values student feedback for continuous improvement'></SectionTitle>
-                    <div className="h-96 carousel-vertical rounded-box"> {/*TODO: Remove class: carousel*/}
+                    <div className="h-96 carousel-vertical rounded-box">
                         <div className="carousel-item h-full relative">
                             <img className="object-fill" src={img1} />
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">

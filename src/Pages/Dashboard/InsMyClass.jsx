@@ -9,7 +9,7 @@ const InsMyClass = () => {
     const [clas, setClas] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/insMyClass/${user?.email}`)
+        fetch(`https://sports-mastery-server.vercel.app/insMyClass/${user?.email}`)
             .then(res => res.json())
             .then(data => setClas(data))
     }, [user])

@@ -16,7 +16,7 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoURL }
-                fetch('http://localhost:5000/users', {
+                fetch('https://sports-mastery-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -44,7 +44,7 @@ const SocialLogin = () => {
 
     return (
         <>
-            <button onClick={handleGoogleSignIn} className='btn border-0 btn-block flex items-center bg-gradient-to-r from-green-700 to-yellow-600 tracking-widest'>Login With Google <span className='ml-4 text-2xl'><FaGoogle></FaGoogle></span></button>
+            <button onClick={handleGoogleSignIn} className='btn border-0 btn-block flex items-center bg-gray-400 font-extrabold tracking-widest'>Login With Google <span className='ml-4 text-2xl'><FaGoogle></FaGoogle></span></button>
         </>
     );
 };

@@ -2,20 +2,21 @@ import { Link, useNavigate } from "react-router-dom";
 import signUpImg from '../../assets/login.gif'
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 
-// TODO - Design Need & Hide - UnHide, Confirm Password
+// TODO - Design Need & Hide - UnHide, Confirm Password, Design Need. Design Correct.
 const SignUp = () => {
 
     // Password Hide & Show 
-    // const [hide, setHide] = useState(false);
-    // const handlePasswordVisible = () => {
-    //     setHide(!hide);
-    // }
+    const [hide, setHide] = useState(false);
+    const handlePasswordVisible = () => {
+        setHide(!hide);
+    }
 
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -33,7 +34,7 @@ const SignUp = () => {
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email, photo: data.photoURL }
                         console.log('saveUser', saveUser);
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://sports-mastery-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -65,8 +66,8 @@ const SignUp = () => {
                     <div className="text-center lg:text-left">
                         <img src={signUpImg} alt="" />
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
-                        <h1 className='text-center text-4xl text-pink-600 font-bold'>Register</h1>
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-3 bg-gradient-to-r from-sky-100 via-purple-300 to-sky-100">
+                        <h1 className='text-center text-4xl text-purple-600 font-extrabold'>Register</h1>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="form-control">
@@ -97,11 +98,14 @@ const SignUp = () => {
                                     <label className="label">
                                         <span className="label-text font-semibold text-base">Password</span>
                                     </label>
-                                    <input defaultValue="" {...register("password", {
-                                        required: true,
-                                        minLength: 6,
-                                        pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*()\-_=+{}[\]|\\:;,<.>/?]).*$/,
-                                    })} type="password" name='password' placeholder="Your Password" className="input border-0 focus:outline-none" />
+                                    <div className="relative">
+                                        <input defaultValue="" {...register("password", {
+                                            required: true,
+                                            minLength: 6,
+                                            pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*()\-_=+{}[\]|\\:;,<.>/?]).*$/,
+                                        })} type={hide ? "text" : "password"} name='password' placeholder="Your Password" className="input border-0 focus:outline-none w-full" />
+                                        <label onClick={handlePasswordVisible} className='cursor-pointer absolute right-2 top-1/2 transform -translate-y-1/2'>{!hide ? <FaRegEye className='text-xl'></FaRegEye> : <FaRegEyeSlash className='text-xl'></FaRegEyeSlash>}</label>
+                                    </div>
                                     {errors.password?.type === 'required' && <span className="text-red-600">Password is required *</span>}
                                     {errors.password?.type === 'minLength' && <span className="text-red-600">Password is less than 6 characters *</span>}
                                     {errors.password?.type === 'pattern' && <span className="text-red-600">Password at least one capital letter and one special character *</span>}
@@ -109,7 +113,7 @@ const SignUp = () => {
 
 
                                 <div className="form-control mt-6">
-                                    <button className="text-md tracking-widest btn border-0 bg-gradient-to-r from-pink-400 to-yellow-500">Register</button>
+                                    <button className="text-md tracking-widest text-white font-extrabold btn border-0 bg-gradient-to-r from-purple-500 to-purple-700">Register</button>
                                 </div>
                             </form>
                             <SocialLogin></SocialLogin>

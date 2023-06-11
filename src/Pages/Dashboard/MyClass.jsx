@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyClass = () => {
 
@@ -23,7 +24,7 @@ const MyClass = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item}`, {
+                fetch(`https://sports-mastery-server.vercel.app/carts/${item}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -50,7 +51,7 @@ const MyClass = () => {
             </Helmet>
             <div>
                 <div className="mb-12">
-                    <SectionTitle heading='Your Selected Classes' subHeading='Streamline Your Shopping Experience: Pay & Delete with Ease!'></SectionTitle>
+                    <SectionTitle heading='Your Selected Classes' subHeading='Streamline Your knowledge Experience: Pay & Delete with Ease!'></SectionTitle>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -79,7 +80,7 @@ const MyClass = () => {
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={item.image} alt="" /></td>
                                         <td className="text-lg font-bold">{item.className}</td>
                                         <td className="text-base font-semibold">$ {item.price}</td>
-                                        <td><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Pay</button></td>
+                                        <td><Link to='/dashboard/payment'><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Pay</button></Link></td>
                                         <td><button onClick={() => handleDelete(item._id)} className="btn btn-outline border-purple-700 text-red-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Delete</button></td>
                                     </tr>)
                             }

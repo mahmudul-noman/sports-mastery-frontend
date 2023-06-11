@@ -12,7 +12,7 @@ const Instructors = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://sports-mastery-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 // setInstructors(data);

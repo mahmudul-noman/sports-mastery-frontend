@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
 body {
   font-family: 'Barlow', sans-serif;
+}
+
+.sub-font {
+  font-family: 'Righteous', cursive;
 }

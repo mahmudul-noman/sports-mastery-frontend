@@ -5,12 +5,11 @@ import Container from "../Pages/Shared/Container/Container";
 import { Helmet } from "react-helmet-async";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
+import { FaBookReader, FaCartArrowDown, FaRegCalendarCheck, FaRegCreditCard, FaRegHandPointRight, FaRegPlusSquare, FaUsers } from 'react-icons/fa';
 
-// TODO - Design Improve, FavIcon
+
 const Dashboard = () => {
 
-    // const isAdmin = true;
-    // const isInstructor = true;
 
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
@@ -45,20 +44,20 @@ const Dashboard = () => {
                                 {
                                     isAdmin ?
                                         <>
-                                            <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/manageClass'>Manage Classes</NavLink>
-                                            <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/allUsers'>Manage Users</NavLink>
+                                            <div className="flex items-center gap-2 text-base"><FaBookReader></FaBookReader><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/manageClass'> Manage Classes</NavLink></div>
+                                            <div className="flex items-center gap-2 text-base"><FaUsers></FaUsers><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/allUsers'>Manage Users</NavLink></div>
                                         </>
                                         :
                                         isInstructor ?
                                             <>
-                                                <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/addClass'>Add Class</NavLink>
-                                                <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/insMyClass'>My Class</NavLink>
+                                                <div className="flex items-center gap-2 text-base"><FaRegPlusSquare></FaRegPlusSquare><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/addClass'>Add Class</NavLink></div>
+                                                <div className="flex items-center gap-2 text-base"><FaRegHandPointRight></FaRegHandPointRight><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/insMyClass'>My Class</NavLink></div>
                                             </>
                                             :
                                             <>
-                                                <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/myClass'>My Selected Classes</NavLink>
-                                                <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/enrolledClass'>My Enrolled Classes</NavLink>
-                                                <NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/payHistory'>Payment History</NavLink>
+                                                <div className="flex items-center gap-2 text-base"><FaRegCalendarCheck></FaRegCalendarCheck><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/myClass'>My Selected Classes</NavLink></div>
+                                                <div className="flex items-center gap-2 text-base"><FaCartArrowDown></FaCartArrowDown><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/enrolledClass'>My Enrolled Classes</NavLink></div>
+                                                <div className="flex items-center gap-2 text-base"><FaRegCreditCard></FaRegCreditCard><NavLink className="text-gray-200 font-semibold uppercase" to='/dashboard/payHistory'>Payment History</NavLink></div>
                                             </>
                                 }
                             </ul>

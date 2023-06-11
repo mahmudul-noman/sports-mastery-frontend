@@ -6,7 +6,6 @@
 
 
 .drawer-side a.active{
+    border-bottom: 2px solid white;
     color: white;
-    font-size: 18px;
-    text-decoration: underline;
 }
