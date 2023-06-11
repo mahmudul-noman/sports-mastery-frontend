@@ -13,6 +13,9 @@ import { FaInfoCircle } from 'react-icons/fa';
 const Classes = () => {
 
     const [classes, loading] = useClass();
+    const approvedClass = classes.filter(cls => cls.status === 'approved');
+
+
     const { user } = useContext(AuthContext);
     const [cart, refetch] = useCart();
     const navigate = useNavigate();
@@ -67,7 +70,7 @@ const Classes = () => {
                 <div className="mt-20">
                     <SectionTitle heading='Discover a World of Sports Excellence' subHeading='Elevate Your Skills with our Comprehensive Classes and Training Programs'></SectionTitle>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                     <FaInfoCircle className="text-cyan-700"></FaInfoCircle>
                     <h2 className="font-semibold">Hello ! {user?.displayName}. You have <span className="font-extrabold text-sky-600 text-xl"><Link to='/dashboard/myClass'>{cart.length || 0} items</Link></span> in your cart.</h2>
@@ -89,7 +92,7 @@ const Classes = () => {
                         </thead>
                         <tbody>
                             {
-                                classes.map((cls, index) =>
+                                approvedClass.map((cls, index) =>
                                     <tr key={cls._id}>
                                         <th>{index + 1}</th>
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={cls.classImage} alt="" /></td>

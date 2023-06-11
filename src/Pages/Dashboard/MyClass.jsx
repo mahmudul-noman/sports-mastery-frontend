@@ -65,7 +65,6 @@ const MyClass = () => {
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">SL</th>
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Image</th>
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Class Name</th>
-                                {/* <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Instructor</th> */}
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Price</th>
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Action</th>
                                 <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Action</th>
@@ -79,7 +78,6 @@ const MyClass = () => {
                                         <th>{index + 1}</th>
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={item.image} alt="" /></td>
                                         <td className="text-lg font-bold">{item.className}</td>
-                                        {/* <td className="font-semibold text-base">{item.instructorName}</td> */}
                                         <td className="text-base font-semibold">$ {item.price}</td>
                                         <td><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Pay</button></td>
                                         <td><button onClick={() => handleDelete(item._id)} className="btn btn-outline border-purple-700 text-red-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Delete</button></td>

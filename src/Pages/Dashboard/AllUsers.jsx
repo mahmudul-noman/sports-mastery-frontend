@@ -5,16 +5,16 @@ import { FaCheckCircle, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
 import Loader from "../Shared/Loader/Loader";
 import useAuth from "../../hooks/useAuth";
-import useAdmin from "../../hooks/useAdmin";
-import useInstructor from "../../hooks/useInstructor";
+// import useAdmin from "../../hooks/useAdmin";
+// import useInstructor from "../../hooks/useInstructor";
 
 
 // TODO: Disabled Unwanted action button
 const AllUsers = () => {
 
     const { loading } = useAuth();
-    const [isAdmin] = useAdmin();
-    const [isInstructor] = useInstructor();
+    // const [isAdmin] = useAdmin();
+    // const [isInstructor] = useInstructor();
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch('http://localhost:5000/users')
@@ -40,8 +40,6 @@ const AllUsers = () => {
             })
     }
 
-
-
     const handleMakeInstructor = user => {
         fetch(`http://localhost:5000/users/instructor/${user._id}`, {
             method: 'PATCH'
@@ -60,7 +58,6 @@ const AllUsers = () => {
                 }
             })
     }
-
 
     if (loading) {
         return <Loader></Loader>
@@ -103,12 +100,12 @@ const AllUsers = () => {
                                     <td className="font-semibold text-base">{user.email}</td>
                                     <td>{
                                         user.role === 'instructor' ? <button className="btn btn-disabled btn-link font-extrabold text-green-600"><FaCheckCircle className="text-xl text-green-700"></FaCheckCircle>Instructor</button> :
-                                            <button onClick={() => handleMakeInstructor(user)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Make Instructor</button>
+                                            <button disabled={user.role === 'admin'} onClick={() => handleMakeInstructor(user)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Make Instructor</button>
                                     }
                                     </td>
                                     <td>{
                                         user.role === 'admin' ? <button className="btn btn-disabled btn-link font-extrabold text-green-600"><FaCheckCircle className="text-xl text-green-700"></FaCheckCircle>Admin</button> :
-                                            <button onClick={() => handleMakeAdmin(user)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Make Admin</button>
+                                            <button disabled={user.role === 'instructor'} onClick={() => handleMakeAdmin(user)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Make Admin</button>
                                     }
                                     </td>
                                 </tr>)

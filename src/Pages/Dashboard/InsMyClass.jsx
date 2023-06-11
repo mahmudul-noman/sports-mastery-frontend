@@ -29,7 +29,7 @@ const InsMyClass = () => {
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Class Name</th>
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Price</th>
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Enrolled</th>
-                            <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Av. Seats</th>
+                            <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Available Seats</th>
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Feedback</th>
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Status</th>
                             <th className="text-base font-semibold uppercase tracking-widest text-sky-700">Action</th>
@@ -47,7 +47,15 @@ const InsMyClass = () => {
                                 <td className="text-base font-semibold">0</td>
                                 <td className="text-base font-semibold">{cl.availableSeats}</td>
                                 <td className="text-base font-semibold">N/A</td>
-                                <td className="text-base font-semibold">Pending</td>
+                                <td className="text-base font-bold">
+                                    {cl.status === 'approved' ? (
+                                        <span className="text-green-600 uppercase">Approved</span>
+                                    ) : cl.status === 'denied' ? (
+                                        <span className="text-red-600 uppercase">Denied</span>
+                                    ) : (
+                                        <span className="uppercase">Pending</span>
+                                    )}
+                                </td>
                                 <td><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Update</button></td>
                             </tr>)
                         }

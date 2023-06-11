@@ -32,7 +32,7 @@ const Dashboard = () => {
                 <Container>
                     <div className="drawer lg:drawer-open gap-10">
                         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                        <div className="drawer-content flex-col items-center justify-center">
+                        <div className="drawer-content flex-col items-center justify-center overflow-auto">
                             {/* Page content here */}
                             <Outlet></Outlet>
                             <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open Menu</label>
