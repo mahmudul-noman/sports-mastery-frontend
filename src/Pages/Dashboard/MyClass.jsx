@@ -46,7 +46,7 @@ const MyClass = () => {
     return (
         <>
             <Helmet>
-                <title>SM | My Classes</title>
+                <title>SM | My Selected Classes</title>
             </Helmet>
             <div>
                 <div className="mb-12">

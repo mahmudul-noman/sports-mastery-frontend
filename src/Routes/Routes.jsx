@@ -12,6 +12,10 @@ import Dashboard from "../Layout/Dashboard";
 import MyClass from "../Pages/Dashboard/MyClass";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/AllUsers";
+import AdminRoute from "./AdminRoute";
+import AddClass from "../Pages/Dashboard/AddClass";
+import InstructorRoute from "./InstructorRoute";
+import InsMyClass from "../Pages/Dashboard/InsMyClass";
 
 export const router = createBrowserRouter([
     {
@@ -41,17 +45,31 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    // Dashboard Routes
     {
         path: '/dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
+            // Admin Routes
+            {
+                path: 'allUsers',
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+
+            // Instructor Routes
+            {
+                path: 'addClass',
+                element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+            },
+            {
+                path: 'insMyClass',
+                element: <InstructorRoute><InsMyClass></InsMyClass></InstructorRoute>
+            },
+
+            // Student Routes
             {
                 path: 'myClass',
                 element: <MyClass></MyClass>
-            },
-            {
-                path: 'allUsers',
-                element: <AllUsers></AllUsers>
             },
         ]
 

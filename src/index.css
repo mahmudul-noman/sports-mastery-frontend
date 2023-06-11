@@ -6,5 +6,7 @@
 
 
 .drawer-side a.active{
-    color: red;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
 }

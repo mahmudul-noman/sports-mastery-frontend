@@ -25,7 +25,7 @@ const PopularInstructors = () => {
                     </SectionTitle>
 
                     <div className="grid grid-cols-6 gap-5">
-                        {instructors.map(instr => (<InstructorCard key={instr._id} instr={instr}></InstructorCard>))}
+                        {instructors.map((instr, index) => (<InstructorCard key={index} instr={instr}></InstructorCard>))}
                     </div>
 
                     <button className="btn mt-10 mx-auto flex btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">See All Instructors</button>

@@ -3,8 +3,14 @@ import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { FaCheckCircle, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
+import Loader from "../Shared/Loader/Loader";
+import useAuth from "../../hooks/useAuth";
 
+
+// TODO: Disabled Unwanted action button
 const AllUsers = () => {
+
+    const { loading } = useAuth();
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch('http://localhost:5000/users')
@@ -49,6 +55,11 @@ const AllUsers = () => {
                     })
                 }
             })
+    }
+
+
+    if (loading) {
+        return <Loader></Loader>
     }
 
     return (
