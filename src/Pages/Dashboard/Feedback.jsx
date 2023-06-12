@@ -6,10 +6,10 @@ import Swal from "sweetalert2";
 
 const Feedback = () => {
 
-    const clsData = useLoaderData()
-    console.log(clsData);
+    const cls = useLoaderData()
+    const { _id } = cls;
 
-    const url = `https://sports-mastery-server.vercel.app/classes/${clsData}`;
+    const url = `https://sports-mastery-server.vercel.app/classes/${cls._id}`;
     console.log(url);
 
 

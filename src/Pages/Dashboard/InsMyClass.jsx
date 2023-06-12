@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import useAuth from "../../hooks/useAuth";
+import { motion } from "framer-motion";
 
 const InsMyClass = () => {
 
@@ -39,7 +40,10 @@ const InsMyClass = () => {
                     <tbody>
 
                         {
-                            clas.map((cl, index) => <tr key={cl._id}>
+                            clas.map((cl, index) => <motion.tr
+                                whileHover={{ scale: .9 }}
+                                whileTap={{ scale: 1.1 }}
+                                key={cl._id}>
                                 <th>{index + 1}</th>
                                 <td><img className="w-14 h-14 rounded-xl object-cover" src={cl.classImage} alt="" /></td>
                                 <td className="text-lg font-bold">{cl.className}</td>
@@ -57,7 +61,7 @@ const InsMyClass = () => {
                                     )}
                                 </td>
                                 <td><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Update</button></td>
-                            </tr>)
+                            </motion.tr>)
                         }
 
                     </tbody>
