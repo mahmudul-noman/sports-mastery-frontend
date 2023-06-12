@@ -9,7 +9,6 @@ import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { FaInfoCircle } from 'react-icons/fa';
-import { motion } from "framer-motion";
 
 
 const Classes = () => {
@@ -96,11 +95,8 @@ const Classes = () => {
                         <tbody>
                             {
                                 approvedClass.map((cls, index) =>
-                                    <motion.tr
-
+                                    <tr
                                         key={cls._id}
-                                        whileHover={{ scale: .9 }}
-                                        whileTap={{ scale: 1.1 }}
                                     >
                                         <th>{index + 1}</th>
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={cls.classImage} alt="" /></td>
@@ -109,7 +105,7 @@ const Classes = () => {
                                         <td className="text-base font-semibold">{cls.availableSeats}</td>
                                         <td className="text-base font-semibold">$ {cls.price}</td>
                                         <td><button onClick={() => handleAddToCart(cls)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Select</button></td>
-                                    </motion.tr>)
+                                    </tr>)
                             }
                         </tbody>
                     </table>

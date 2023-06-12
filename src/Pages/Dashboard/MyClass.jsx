@@ -6,7 +6,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const MyClass = () => {
 
@@ -76,9 +75,8 @@ const MyClass = () => {
                         <tbody>
                             {
                                 cart.map((item, index) =>
-                                    <motion.tr
-                                        whileHover={{ scale: .9 }}
-                                        whileTap={{ scale: 1.1 }}
+                                    <tr
+                                        
                                         key={item._id}>
                                         <th>{index + 1}</th>
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={item.image} alt="" /></td>
@@ -86,7 +84,7 @@ const MyClass = () => {
                                         <td className="text-base font-semibold">$ {item.price}</td>
                                         <td><Link to='/dashboard/payment'><button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Pay</button></Link></td>
                                         <td><button onClick={() => handleDelete(item._id)} className="btn btn-outline border-purple-700 text-red-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Delete</button></td>
-                                    </motion.tr>)
+                                    </tr>)
                             }
                         </tbody>
                     </table>
