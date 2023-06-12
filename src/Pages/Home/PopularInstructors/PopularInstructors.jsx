@@ -27,7 +27,7 @@ const PopularInstructors = () => {
                     <SectionTitle heading='Our Popular Instructors' subHeading='We Believe in Quality.'>
                     </SectionTitle>
 
-                    <div className="grid grid-cols-6 gap-5">
+                    <div className="grid md:grid-cols-6 gap-5">
                         {instructors.map((instr, index) => (<InstructorCard key={index} instr={instr}></InstructorCard>))}
                     </div>
 

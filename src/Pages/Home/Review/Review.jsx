@@ -22,13 +22,13 @@ const Review = () => {
                         <div className="carousel-item h-full relative">
                             <img className="object-fill" src={img1} />
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">
-                                <div className='flex px-48 text-start justify-center gap-10 items-center'>
+                                <div className='md:flex px-3 md:px-48 text-start justify-center gap-10 items-center'>
                                     <div className='z-10'>
-                                        <img className='object-cover rounded-xl h-[200px]' src={reviewImg1} alt="" />
+                                        <img className='object-cover rounded-xl w-24 md:h-[200px]' src={reviewImg1} alt="" />
                                     </div>
                                     <div>
                                         <Rating
-                                        className='text-3xl text-yellow-600'
+                                        className='text-xl md:text-3xl text-yellow-600'
                                         readonly
                                         placeholderRating={5}
                                         emptySymbol={<FaRegStar></FaRegStar>}
@@ -44,13 +44,13 @@ const Review = () => {
                         <div className="carousel-item h-full relative">
                             <img className="object-fill" src={img2} />
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">
-                                <div className='flex px-48 justify-center text-start gap-10 items-center'>
+                                <div className='md:flex px-3 md:px-48 justify-center text-start gap-10 items-center'>
                                     <div className='z-10'>
-                                        <img className='object-cover rounded-xl h-[200px]' src={reviewImg2} alt="" />
+                                        <img className='object-cover rounded-xl w-24 md:h-[200px]' src={reviewImg2} alt="" />
                                     </div>
                                     <div>
                                         <Rating
-                                        className='text-3xl text-yellow-600'
+                                        className='text-xl md:text-3xl text-yellow-600'
                                         readonly
                                         placeholderRating={3}
                                         emptySymbol={<FaRegStar></FaRegStar>}
@@ -66,13 +66,13 @@ const Review = () => {
                         <div className="carousel-item h-full relative">
                             <img className="object-fill" src={img3} />
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">
-                                <div className='flex px-48 justify-center text-start gap-10 items-center'>
+                                <div className='md:flex px-3 md:px-48 justify-center text-start gap-10 items-center'>
                                     <div className='z-10'>
-                                        <img className='object-cover rounded-xl h-[200px]' src={reviewImg3} alt="" />
+                                        <img className='object-cover rounded-xl w-24 md:h-[200px]' src={reviewImg3} alt="" />
                                     </div>
                                     <div>
                                         <Rating
-                                        className='text-3xl text-yellow-600'
+                                        className='text-xl md:text-3xl text-yellow-600'
                                         readonly
                                         placeholderRating={4.5}
                                         emptySymbol={<FaRegStar></FaRegStar>}
@@ -88,13 +88,13 @@ const Review = () => {
                         <div className="carousel-item h-full relative">
                             <img className="object-fill" src={img4} />
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">
-                                <div className='flex px-48 justify-center text-start gap-10 items-center'>
+                                <div className='md:flex px-3 md:px-48 justify-center text-start gap-10 items-center'>
                                     <div className='z-10'>
-                                        <img className='object-cover rounded-xl h-[200px]' src={reviewImg4} alt="" />
+                                        <img className='object-cover rounded-xl w-24 md:h-[200px]' src={reviewImg4} alt="" />
                                     </div>
                                     <div>
                                         <Rating
-                                        className='text-3xl text-yellow-600'
+                                        className='text-xl md:text-3xl text-yellow-600'
                                         readonly
                                         placeholderRating={2.5}
                                         emptySymbol={<FaRegStar></FaRegStar>}

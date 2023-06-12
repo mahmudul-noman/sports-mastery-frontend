@@ -31,7 +31,7 @@ const Footer = () => {
                         <a className="link link-hover text-lg">mhnoman75@gmail.com</a>
                     </div>
                 </footer>
-                <div className='bg-black text-white flex justify-between px-10 py-5 border-t-[1px]'>
+                <div className='bg-black text-white text-sm md:text-base text-center md:flex justify-between px-10 py-5 border-t-[1px]'>
                     <p>Sports Mastery Academy by <span className='font-bold tracking-wider'>Mahmudul Hasan</span></p>
                     <p>Copyright © 2023. All rights reserved</p>
                 </div>

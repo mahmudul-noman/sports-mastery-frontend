@@ -17,7 +17,7 @@ const PopularClasses = () => {
                     <SectionTitle heading='Our Popular Classes' subHeading='Choose the best Classes that fit for you'>
                     </SectionTitle>
 
-                    <div className="grid grid-cols-3 gap-20">
+                    <div className="grid md:grid-cols-3 gap-20">
                         {popularClasses.map(cls => (<ClassCard key={cls._id} cls={cls}></ClassCard>))}
                     </div>
 
