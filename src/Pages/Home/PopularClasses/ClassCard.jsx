@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 const ClassCard = ({ cls }) => {
 
@@ -5,8 +6,11 @@ const ClassCard = ({ cls }) => {
 
 
     return (
-        <div className="card bg-base-100 shadow-xl group">
-            <figure><img className="group-hover:scale-110 transition" src={classImage} alt="Class Image" /></figure>
+        <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="card bg-base-100 shadow-xl">
+            <figure><img className="group-hover:scale-110 transition h-80 object-cover" src={classImage} alt="Class Image" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{className}</h2>
                 <p className="font-semibold text-transparent bg-gradient-to-r from-purple-900 to-sky-300 bg-clip-text">Instructor: {instructorName}</p>
@@ -17,7 +21,7 @@ const ClassCard = ({ cls }) => {
                     <button className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Enroll</button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

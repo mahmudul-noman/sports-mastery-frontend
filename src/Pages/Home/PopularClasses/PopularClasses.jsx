@@ -5,24 +5,9 @@ import useClass from "../../../hooks/useClass";
 
 const PopularClasses = () => {
 
-
     const [classes] = useClass();
     const sortedClasses = classes.sort((a, b) => b.enrolledStudents - a.enrolledStudents);
     const popularClasses = sortedClasses.slice(0, 6);
-
-
-
-    // const [classes, setClasses] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('classes.json')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             const sortedClasses = data.sort((a, b) => b.enrolledStudents - a.enrolledStudents);
-    //             const popularClasses = sortedClasses.slice(0, 6);
-    //             setClasses(popularClasses);
-    //         })
-    // }, [])
 
 
     return (

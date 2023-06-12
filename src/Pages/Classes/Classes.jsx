@@ -9,9 +9,10 @@ import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import { FaInfoCircle } from 'react-icons/fa';
+import { motion } from "framer-motion";
+
 
 const Classes = () => {
-
     const [classes, loading] = useClass();
     const approvedClass = classes.filter(cls => cls.status === 'approved');
 
@@ -61,8 +62,10 @@ const Classes = () => {
     if (loading) {
         return <Loader></Loader>
     }
+
+
     return (
-        <>
+        <m>
             <Helmet>
                 <title>SM | Classes</title>
             </Helmet>
@@ -93,7 +96,12 @@ const Classes = () => {
                         <tbody>
                             {
                                 approvedClass.map((cls, index) =>
-                                    <tr key={cls._id}>
+                                    <motion.tr
+
+                                        key={cls._id}
+                                        whileHover={{ scale: .9 }}
+                                        whileTap={{ scale: 1.1 }}
+                                    >
                                         <th>{index + 1}</th>
                                         <td><img className="w-32 h-32 rounded-xl object-cover" src={cls.classImage} alt="" /></td>
                                         <td className="text-lg font-bold">{cls.className}</td>
@@ -101,13 +109,13 @@ const Classes = () => {
                                         <td className="text-base font-semibold">{cls.availableSeats}</td>
                                         <td className="text-base font-semibold">$ {cls.price}</td>
                                         <td><button onClick={() => handleAddToCart(cls)} className="btn btn-outline border-purple-700 text-sky-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">Select</button></td>
-                                    </tr>)
+                                    </motion.tr>)
                             }
                         </tbody>
                     </table>
                 </div>
             </Container>
-        </>
+        </m>
     );
 };
 

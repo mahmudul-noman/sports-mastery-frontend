@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import useAuth from '../../hooks/useAuth';
 
+
+
 const Instructors = () => {
 
     const { loading } = useAuth();
@@ -37,7 +39,8 @@ const Instructors = () => {
                 </div>
 
                 {/* ------------------------------ */}
-                <div className="pt-10 pb-24">
+                <div
+                className="pt-10 pb-24">
                     <table className="table w-full text-center">
                         <thead>
                             <tr>
