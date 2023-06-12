@@ -4,13 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import Container from '../../Shared/Container/Container';
-// Slider Image
-import img1 from '../../../assets/banner/01.png'
-import img2 from '../../../assets/banner/02.png'
-import img3 from '../../../assets/banner/03.png'
-import img4 from '../../../assets/banner/04.png'
-import img5 from '../../../assets/banner/05.png'
-import img6 from '../../../assets/banner/06.png'
+
 
 
 const Slider = () => {
