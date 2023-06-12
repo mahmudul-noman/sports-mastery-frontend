@@ -20,6 +20,7 @@ import ManageClass from "../Pages/Dashboard/ManageClass";
 import EnrolledClass from "../Pages/Dashboard/EnrolledClass";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory";
 import Payment from "../Pages/Dashboard/Payment";
+import Feedback from "../Pages/Dashboard/Feedback";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +63,11 @@ export const router = createBrowserRouter([
             {
                 path: 'manageClass',
                 element: <AdminRoute><ManageClass></ManageClass></AdminRoute>
+            },
+            {
+                path: 'feedback/:id',
+                element: <Feedback></Feedback>,
+                loader: ({ params }) => fetch(`https://sports-mastery-server.vercel.app/classes/${params.id}`)
             },
 
             // Instructor Routes

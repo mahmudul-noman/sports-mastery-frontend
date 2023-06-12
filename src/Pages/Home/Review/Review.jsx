@@ -24,7 +24,7 @@ const Review = () => {
                             <div className="absolute inset-0  bg-black opacity-90 flex text-center items-center justify-center">
                                 <div className='md:flex px-3 md:px-48 text-start justify-center gap-10 items-center'>
                                     <div className='z-10'>
-                                        <img className='object-cover rounded-xl w-24 md:h-[200px]' src={reviewImg1} alt="" />
+                                        <img className='object-cover rounded-xl sm:w-24 md:h-[200px]' src={reviewImg1} alt="" />
                                     </div>
                                     <div>
                                         <Rating

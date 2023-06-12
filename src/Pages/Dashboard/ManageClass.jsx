@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+
 
 const ManageClass = () => {
 
@@ -11,6 +13,7 @@ const ManageClass = () => {
     })
 
     const handleUpdateStatus = (cls, status) => {
+        console.log(cls)
         fetch(`https://sports-mastery-server.vercel.app/classes/${cls._id}/status`, {
             method: 'PATCH',
             headers: {
@@ -44,6 +47,7 @@ const ManageClass = () => {
 
     return (
         <>
+ 
             <SectionTitle heading='Manage Classes'></SectionTitle>
             {/* ------------------------------ */}
             <div className="pt-10 pb-12">
@@ -111,9 +115,9 @@ const ManageClass = () => {
                                 </td>
 
                                 <td>
-                                    <button className="btn btn-sm btn-outline border-purple-700 text-purple-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">
+                                    <Link to={`/dashboard/feedback/${cls._id}`} ><button className="btn btn-sm btn-outline border-purple-700 text-purple-600 hover:bg-purple-600 hover:text-white border-0 border-b-2 border-t-2">
                                         Feedback
-                                    </button>
+                                    </button></Link>
                                 </td>
                             </tr>
                         ))}

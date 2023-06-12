@@ -30,7 +30,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img3} />
+                                <img src='https://i.ibb.co/X4RrNpY/03.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
@@ -45,7 +45,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img1} />
+                                <img src='https://i.ibb.co/cYnmcw2/04.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
@@ -60,7 +60,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img2} />
+                                <img src='https://i.ibb.co/y0qwXpJ/05.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
@@ -75,7 +75,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img4} />
+                                <img src='https://i.ibb.co/vzHS1vg/06.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
@@ -90,7 +90,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img5} />
+                                <img src='https://i.ibb.co/KbhdT60/01.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
@@ -105,7 +105,7 @@ const Slider = () => {
                     <SwiperSlide>
                         <div className="flex md:h-screen items-center justify-center">
                             <div>
-                                <img src={img6} />
+                                <img src='https://i.ibb.co/6m6GG0S/02.png' />
                             </div>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-start space-y-3">
                                 <h2 className="uppercase text-xl md:text-5xl text-start font-extrabold text-white">CREATING WORLD-CLASS</h2>
